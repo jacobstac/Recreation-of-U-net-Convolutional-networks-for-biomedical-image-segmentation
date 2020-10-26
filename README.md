@@ -7,11 +7,13 @@ by Jacob Stachowicz, Max Joel Söderberg and Anton Ivarsson
 <p align="center"><img align = "center" src="images/unet.png" width="50%"></p>
 Figure 1: Example U-net structure
 
+<p align="center"><img align = "center" src="images/2.png" width="50%"></p>
+Figure 2: Sample from the HeLa data set.
+
 
 ##### **Abstract:**
 
-The subject of the project was biomedical image segmentation. Namely to repro
-duce the results of the paper "U-net: Convolutional networks for biomedical image
+The subject of the project was biomedical image segmentation. Namely to reproduce the results of the paper "U-net: Convolutional networks for biomedical image
 segmentation" by Olaf Ronnenberger, Philipp Fischer and Thomas Brox. After
 the reproduction the goal was to implement another model for segmentation and
 compare how the strategies used by Ronneberger et al. (2015) performed on the
