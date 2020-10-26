@@ -102,11 +102,11 @@ to heavily influence the update in the optimization step.
 In Ronneberger et al. (2015), the measurement of accuracy was done using IOU (1) which compares the intersection of the cells in relation to the union. In addition to that method, we also used F1 score
 (2) to measure the accuracy in relation to precision and recall.
 
-<p align="center"><img align = "center" src="images/3.png" width="80%"></p>
+<p align="center"><img align = "center" src="images/3.png" width="50%"></p>
 
 In image segmentation, it is possible using binary cross entropy (3) since it’s a pixel-wise classification
 task
-<p align="center"><img align = "center" src="images/4.png" width="80%"></p>
+<p align="center"><img align = "center" src="images/4.png" width="70%"></p>
 Training a large neural network on a small amount of data introduces the risk of overfitting the
 network. To prevent this, a dropout was added at each layer with values ranging between 0.1 and 0.3.
 
@@ -115,7 +115,7 @@ The loss function was defined as can be seen in equation 4. Equation 5 shows the
 weight matrix was calculated. Ω is the set of pixels in a given image, wc(X) a precomputed weight
 map to counteract class imbalance, d1(X) and d2(X) is the distance from the pixel X to the closest
 and second closest cell respectively. l is the true label of each pixel.
-<p align="center"><img align = "center" src="images/5.png" width="80%"></p>
+<p align="center"><img align = "center" src="images/5.png" width="70%"></p>
 
 ##### 4.3 Preprocessing of data
 Initially the label data consisted of matrices filled with the ground truth of where each cell was
