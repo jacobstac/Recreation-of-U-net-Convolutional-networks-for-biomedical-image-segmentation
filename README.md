@@ -102,11 +102,11 @@ to heavily influence the update in the optimization step.
 In Ronneberger et al. (2015), the measurement of accuracy was done using IOU (1) which compares the intersection of the cells in relation to the union. In addition to that method, we also used F1 score
 (2) to measure the accuracy in relation to precision and recall.
 
-<p align="center"><img align = "right" src="images/3.png" width="35%"></p>
+<p align="center"><img align = "center" src="images/3.png" width="80%"></p>
 
 In image segmentation, it is possible using binary cross entropy (3) since it’s a pixel-wise classification
 task
-<p align="center"><img align = "right" src="images/4.png" width="35%"></p>
+<p align="center"><img align = "center" src="images/4.png" width="80%"></p>
 Training a large neural network on a small amount of data introduces the risk of overfitting the
 network. To prevent this, a dropout was added at each layer with values ranging between 0.1 and 0.3.
 
@@ -115,7 +115,7 @@ The loss function was defined as can be seen in equation 4. Equation 5 shows the
 weight matrix was calculated. Ω is the set of pixels in a given image, wc(X) a precomputed weight
 map to counteract class imbalance, d1(X) and d2(X) is the distance from the pixel X to the closest
 and second closest cell respectively. l is the true label of each pixel.
-<p align="center"><img align = "right" src="images/5.png" width="35%"></p>
+<p align="center"><img align = "center" src="images/5.png" width="80%"></p>
 
 ##### 4.3 Preprocessing of data
 Initially the label data consisted of matrices filled with the ground truth of where each cell was
@@ -124,7 +124,7 @@ that each cell was represented as ones and the background as zero, (Figure 3b). 
 since there was no logic in which class label each cell had and it also enabled the use of binary cross
 entropy as a loss function.
 
-<p align="center"><img align = "center" src="images/6.png" width="35%"></p>
+<p align="center"><img align = "center" src="images/6.png" width="80%"></p>
 Figure 3: (a) Unprocessed label (b) Color processed label.
 
 One important key feature in the u-net paper was the augmentation of the training and validation
@@ -133,7 +133,7 @@ The augmentation techniques used on the images in our project were rotation, zoo
 width or height and horizontal flip, (Figure 4). Our augmentations allowed us to increase our training data by a 12-fold, from 134 to 1447 training images, before being limited by the 16 GB’s of memory
 in our training environment.
 
-<p align="center"><img align = "center" src="images/7.png" width="35%"></p>
+<p align="center"><img align = "center" src="images/7.png" width="80%"></p>
 Figure 4: (a) A sample picture from the HeLa data set without augmentation (b) Augmentation of the
 first image with a rotation of the y-axis
 
@@ -163,11 +163,11 @@ Figure 5 shows graphs over the change of loss through different epochs for the m
 without augmented images. Figure 6 shows graphs over the change of F1-score through different
 epochs for the model with and without data augmentation.
 
-<p align="center"><img align = "center" src="images/8.png" width="35%"></p>
+<p align="center"><img align = "center" src="images/8.png" width="80%"></p>
 Figure 5: Binary cross entropy loss for each epoch through the training of the model (a) with
 augmentation and (b) without augmentation.
 
-<p align="center"><img align = "center" src="images/9.png" width="35%"></p>
+<p align="center"><img align = "center" src="images/9.png" width="80%"></p>
 Figure 6: F1-score for each epoch through the training of the model (a) with augmentation and (b)
 without augmentation.
 
@@ -181,7 +181,7 @@ with the added augmented images in the training makes confident predictions that
 truth (figure 7d) while the predictions by the model without augmentations (figure 7b) are indecisive
 and unclear.
 
-<p align="center"><img align = "center" src="images/10.png" width="35%"></p>
+<p align="center"><img align = "center" src="images/10.png" width="80%"></p>
 
 Figure 7: (a) Sample form the test data set (b) The prediction made by the model without augmented
 training images. (c) The prediction made by the model with augmented training data. (d) Shows the
@@ -197,7 +197,7 @@ function consists of two parts. The first part is the class imbalance, which is 
 combined weights as seen in figure 8d indicate the use of the custom loss function could improve the
 prediction around the cell borders.
 
-<p align="center"><img align = "center" src="images/11.png" width="35%"></p>
+<p align="center"><img align = "center" src="images/11.png" width="80%"></p>
 Figure 8: (a) Mask image, (b) Class imbalance mask, (c) Border mask (d) Image weights
 
 #### 6 Conclusion
